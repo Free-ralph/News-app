@@ -20,6 +20,7 @@ const AddStory = ({ handleSnackOpen }) => {
   });
   const handleSubmit = () => {
     console.log(category);
+    // const url = "http://127.0.0.1:8000/api/add-story";
     const url = "/api/add-story";
     axios
       .post(url, {

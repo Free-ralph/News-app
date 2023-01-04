@@ -20,7 +20,7 @@ const NewsCard = ({
     1: "yesterday",
   };
   const handleDelete = () => {
-    console.log('Clicked')
+    // const url = `http://127.0.0.1:8000/api/delete-story/${id}`;
     const url = `/api/delete-story/${id}`;
     axios.get(url).then((res) => {
       navigate("/");

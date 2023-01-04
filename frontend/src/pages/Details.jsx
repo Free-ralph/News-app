@@ -41,6 +41,7 @@ const Details = ({ handleOpen }) => {
   }, []);
   const fetchNews = () => {
     setloading(true);
+    // const url = `http://127.0.0.1:8000/api/news-by-slug/${newsSlug}`;
     const url = `/api/news-by-slug/${newsSlug}`;
     axios
       .get(url)
@@ -56,6 +57,7 @@ const Details = ({ handleOpen }) => {
 
   const handlePostComment = () => {
     sethasError(false);
+    // const url = "http://127.0.0.1:8000/api/add-comment";
     const url = "/api/add-comment";
     axios
       .post(url, {

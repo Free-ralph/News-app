@@ -75,7 +75,9 @@ const Home = ({ handleSnackOpen }) => {
 
   const fetchData = () => {
     const topStoriesUrl = "/api/top-news/5";
+    // const topStoriesUrl = "http://127.0.0.1:8000/api/top-news/5";
     const newsFeedUrl = "/api/news";
+    // const newsFeedUrl = "http://127.0.0.1:8000/api/news";
     const getTopStories = axios.get(topStoriesUrl);
     const getNewsFeed = axios.get(newsFeedUrl);
 
@@ -103,6 +105,7 @@ const Home = ({ handleSnackOpen }) => {
   };
   const SyncDB = () => {
     const url = "/api/sychronize-DB";
+    // const url = "http://127.0.0.1:8000/api/sychronize-DB";
     console.log("called");
     axios
       .get(url)
@@ -132,6 +135,7 @@ const Home = ({ handleSnackOpen }) => {
     dispatch({
       type: ACTIONS.SearchRequest,
     });
+    // const searchUrl = `http://127.0.0.1:8000/api/news/search?query=${e.target.value}`;
     const searchUrl = `/api/news/search?query=${e.target.value}`;
     axios.get(searchUrl).then(({ data }) => {
       dispatch({
@@ -149,6 +153,7 @@ const Home = ({ handleSnackOpen }) => {
       fetchData()
       return
     } 
+    // const url = `http://127.0.0.1:8000/api/news-by-category/${filter}`;
     const url = `/api/news-by-category/${filter}`;
     dispatch({
       type: ACTIONS.FetchRequest,
