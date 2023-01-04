@@ -1,1 +1,1 @@
-web: gunicorn newsHacker.wsgi --log.file
+web: gunicorn newsHacker.wsgi
